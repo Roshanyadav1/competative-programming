@@ -3,13 +3,15 @@ using namespace std;
 
 int main()
 {
-    int arr[] = {1, 6, 98, 5, 6, 3, 98, 9};
-
-    int len = sizeof(arr) / sizeof(arr[0]);
-
-    for (int i = 0; i < len; i++)
+    int arr[10];
+    for (int i = 0; i < 10; i++)
     {
-        for (int j = 0; j < len; j++)
+        cin >> arr[i];
+    }
+
+    for (int i = 0; i < 10; i++)
+    {
+        for (int j = 0; j < 10; j++)
         {
             if (arr[i] <= arr[j])
             {
@@ -20,10 +22,7 @@ int main()
         }
     }
 
-    cout << "The sorted elements are : \n"
-         << endl;
-
-    for (int i = 0; i < len; i++)
+    for (int i = 0; i < 10; i++)
     {
         cout << arr[i] << endl;
     }
