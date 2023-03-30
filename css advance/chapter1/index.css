@@ -1,0 +1,46 @@
+:root {
+    transition: ease-in-out 2s;
+
+    --primary-color: lightblue;
+    --secondary-color: lightgreen;
+    --tinted-color: lightyellow;
+
+    color-scheme: light dark;
+}
+
+/* dark and light mode  */
+@media(prefers-color-scheme: dark) {
+    :root {
+        transition: ease-in-out 2s;
+        --primary-color: rgb(88, 52, 99);
+        --secondary-color: rgb(63, 29, 56);
+        --tinted-color: rgb(74, 70, 75);
+    }
+
+}
+
+:root {
+    --primary-color: hsl(250 30% 40%);
+    --secondary-color: hsl(190 40% 40%);
+    --tinted-background: hsl(0 0% 100% / .8);
+}
+
+h1 {
+    color: var(--secondary-color);
+}
+
+article {
+    background: var(--primary-color);
+}
+
+article h2 {
+    color: white;
+}
+
+article a {
+    color: var(--primary-color);
+}
+
+article .content {
+    background: var(--tinted-background);
+}
