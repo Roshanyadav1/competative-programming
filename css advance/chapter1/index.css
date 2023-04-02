@@ -1,13 +1,3 @@
-:root {
-    transition: ease-in-out 2s;
-
-    --primary-color: lightblue;
-    --secondary-color: lightgreen;
-    --tinted-color: lightyellow;
-
-    color-scheme: light dark;
-}
-
 /* dark and light mode  */
 @media(prefers-color-scheme: dark) {
     :root {
@@ -17,6 +7,11 @@
         --tinted-color: rgb(74, 70, 75);
     }
 
+}
+
+@property --corner-size {
+    syntax: "*";
+    inherits: false;
 }
 
 :root {
@@ -44,3 +39,31 @@ article a {
 article .content {
     background: var(--tinted-background);
 }
+
+/* second chapter */
+progress {
+    -webkit-appearance: none;
+    background: hsl(220 10% 88%);
+    --bar-color: hsl(30 80% 40%)
+}
+
+progress::-webkit-progress-value {
+    background: var(--bar-color);
+}
+
+progress::-moz-progress-bar {
+    background: var(--bar-color);
+}
+
+/* support css variable or not  */
+
+@supports (--f : yolo) {
+    body {
+        background: rgba(104, 151, 194, 0.514);
+    }
+}
+
+
+
+/* multiple fallbacks  */
+/* background: var(--nonexistent, none, yellowgreen); */
