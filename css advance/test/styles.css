@@ -1,0 +1,43 @@
+:root {
+    --primary_color: 'lightblue';
+    --secondry_color: 'lightgreen';
+    --blury_color: '#eee';
+
+    --bar_height: 30px;
+}
+
+
+
+body {
+    height: calc(100vh - var(--bar_height));
+    width: auto;
+    background-color: var(--blury_color);
+}
+
+h1 {
+    background-color: var(--primary_color, lightblue);
+    justify-items: center;
+}
+
+.parant {
+    --gutter: 0.5em;
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    row-gap: var(--gutter);
+}
+
+/* for the child children should be less than the parant  */
+.child:nth-last-of-type(1) {
+    background-color: orange;
+    grid-column-end: span calc(var(--columns) - 1);
+}
+
+.child {
+    grid-template-rows: auto;
+}
+
+@media (min-width: 600px) {
+    .parant {
+        --columns: 3;
+    }
+}
