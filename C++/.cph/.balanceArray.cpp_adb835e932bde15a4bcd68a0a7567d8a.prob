@@ -1,0 +1,1 @@
+{"name":"Local: balanceArray","url":"c:\\Roshan\\Java\\C++\\balanceArray.cpp","tests":[{"id":1684408644265,"input":"4\n3\n1 2 3\n4\n5 5 5 5\n4\n2 2 1 1\n3\n1 1 2","output":"2\n0\n2\n1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Roshan\\Java\\C++\\balanceArray.cpp","group":"local","local":true}
